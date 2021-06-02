@@ -75,18 +75,13 @@ Collections and database (named: `webdev`) are created!
 
 ### .env
 
-The .env file define the constants for the application, use this commands:
+The .env file define the constants for the application, exists a sample
+for the .env file, it file (`sample.env`) show for you all app constants
+without the values, the values are writed by you. Type this commands:
 
 ```sh
 cd repo/webdev
-touch .env
-vim .env # edit it!
-```
-
-Exists an example file: `sample.env`:
-
-```sh
-cp sample.env .env
+cp -r ./sample.env ./.env
 ```
 
 Now edit it:
