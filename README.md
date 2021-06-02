@@ -11,6 +11,7 @@ The tecnologies implemented on this project are:
 - Node.js
 - MongoDB
 - Javascript
+- Bootstrap 5
 
 ## Setting up
 
