@@ -107,7 +107,7 @@ complete `MONGO_URI` = `mongodb://localhost:27017/webdev`.
 
 ### Starting without hot reloading (only for use)
 
-To start with hot reloading (nodemon), use this commands:
+To start without hot reloading (nodemon), use this commands:
 
 ```sh
 cd $HOME/repo/webdev
