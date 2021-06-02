@@ -1,0 +1,63 @@
+{{#if error}}
+  <div class="alert alert-danger">
+    {{error}}
+  </div>
+{{/if}}
+
+{{#if success}}
+  <div class="alert alert-success">
+    {{success}}
+  </div>
+{{/if}}
+
+<div class="row">
+  <div class="col mt-2">
+    <h3>Registered todos</h3>
+  </div>
+  <div class="col mt-2" style="text-align: right;">
+    <a class="btn btn-success" href="/app/create">
+      Create todo
+    </a>
+  </div>
+</div>
+
+<table class="table-striped table">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Description</th>
+      <th>Completed</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    {{#if todos}}
+      {{#each todos}}
+        <tr>
+          <td>{{name}}</td>
+          <td>{{description}}</td>
+          <td>{{booleanShower completed}}</td>
+          <td>
+            <button class="btn btn-danger" onclick="deleteTodo('{{_id}}')">
+              Delete
+            </button>
+            
+            <a class="btn btn-warning" href="/app/update/{{_id}}">
+              Update
+            </a>
+          </td>
+        </tr>
+      {{/each}}
+    {{else}}
+      <tr>
+        <td colspan="4">Don't have todos to show</td>
+      </tr>
+    {{/if}}
+  </tbody>
+</table>
+
+<script>
+  window.token = "{{token}}";
+</script>
+
+<script src="/vendor/custom/js/app/home.js"></script>

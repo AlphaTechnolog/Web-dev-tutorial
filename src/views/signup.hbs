@@ -1,0 +1,56 @@
+{{#if error}}
+  <div class="alert alert-danger">
+    {{error}}
+  </div>
+{{/if}}
+
+<div class="card">
+  <div class="card-body">
+    <h5 class="card-title text-primary">
+      Signup
+    </h5>
+
+    <form action="/api/signup" method="POST">
+      <div class="row">
+        <div class="col-sm-12 col-md-4 my-2">
+          <div class="form-group">
+            <input
+              type="text"
+              name="name"
+              placeholder="Enter your name"
+              required
+              class="form-control"
+            >
+          </div>
+        </div>
+        <div class="col-sm-12 col-md-4 my-2">
+          <div class="form-group">
+            <input
+              type="email"
+              name="email"
+              placeholder="Enter email"
+              required
+              class="form-control"
+            >
+          </div>
+        </div>
+        <div class="col-sm-12 col-md-4 my-2">
+          <div class="form-group">
+            <input
+              type="password"
+              name="password"
+              placeholder="Enter password"
+              required
+              class="form-control"
+            >
+          </div>
+        </div>
+        <div class="col-sm-12">
+          <button class="btn btn-primary">
+            Send
+          </button>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>

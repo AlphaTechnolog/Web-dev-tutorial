@@ -1,0 +1,46 @@
+{{#if error}}
+  <div class="alert alert-danger">
+    {{error}}
+  </div>
+{{/if}}
+
+<div class="card">
+  <div class="card-body">
+    <h5 class="card-title text-primary">
+      Create todo
+    </h5>
+
+    <form action="/api/app/create" method="POST">
+      <input type="hidden" name="csrf" value="{{token}}">
+      <div class="row">
+        <div class="col-sm-12 col-md-6 my-2">
+          <div class="form-group">
+            <input
+              type="text"
+              name="name"
+              placeholder="Enter todo's name"
+              required
+              class="form-control"
+            >
+          </div>
+        </div>
+        <div class="col-sm-12 col-md-6 my-2">
+          <div class="form-group">
+            <input
+              type="text"
+              name="description"
+              placeholder="Enter todo's description"
+              required
+              class="form-control"
+            >
+          </div>
+        </div>
+        <div class="col-sm-12">
+          <button class="btn btn-primary">
+            Send
+          </button>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>

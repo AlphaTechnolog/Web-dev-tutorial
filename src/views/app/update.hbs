@@ -1,0 +1,56 @@
+<div class="card">
+  <div class="card-body">
+    <h5 class="card-title text-primary">
+      Update todo {{todo.name}}
+    </h5>
+
+    <form action="/api/app/update/{{todo._id}}" method="POST">
+      <input type="hidden" value="{{token}}" name="csrf">
+      <div class="row">
+        <div class="col-sm-12 col-md-4 my-2">
+          <div class="form-group">
+            <input
+              type="text"
+              name="name"
+              placeholder="Enter todo's name"
+              required
+              class="form-control"
+              value="{{todo.name}}"
+            >
+          </div>
+        </div>
+        <div class="col-sm-12 col-md-4 my-2">
+          <div class="form-group">
+            <input
+              type="text"
+              name="description"
+              placeholder="Enter todo's description"
+              required
+              class="form-control"
+              value="{{todo.description}}"
+            >
+          </div>
+        </div>
+        <div class="col-sm-12 col-md-4 my-2">
+          <div class="form-check">
+            <input
+              type="checkbox"
+              name="completed"
+              class="form-check-input"
+              id="completed"
+              {{#if todo.completed}}checked{{/if}}
+            >
+            <label for="completed" class="form-check-label">
+              Completed
+            </label>
+          </div>
+        </div>
+        <div class="col-sm-12">
+          <button class="btn btn-primary">
+            Send
+          </button>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
