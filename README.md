@@ -63,11 +63,12 @@ mongo
 
 In the interactive prompt, type this:
 
-```
+```js
 use webdev # or anyone database name
-for (const collectionName of ['users', 'todos']) {
-  db.createCollection(collectionName);
-}
+const collections = ['users', 'todos'];
+collections.forEach((collection) => {
+  db.createCollection(collection);
+});
 ```
 
 Collections and database (named: `webdev`) are created!
