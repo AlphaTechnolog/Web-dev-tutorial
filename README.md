@@ -94,6 +94,10 @@ vim .env
 # Define the port of the app, default: 8000
 APP_PORT=8000
 
+# Define the secret to generate tokens, sessions,
+# and others.
+APP_SECRET=secret
+
 # Define the Mongo DB database address
 # the mongodb atlas uri's, are valid.
 MONGO_URI=mongodb://HOST:PORT/DBNAME
